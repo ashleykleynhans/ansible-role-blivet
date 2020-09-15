@@ -1,0 +1,10 @@
+---
+
+blivet_packages:
+  - python2-blockdev
+  - libblockdev-plugins-all
+  - python2-bytesize
+  - libbytesize
+  - pyparted 
+  - parted
+  - libselinux-python
