@@ -1,0 +1,10 @@
+galaxy_info:
+  author: Ashley Kleynhans
+  description: Ansible role to install the blivet python module for managing system storage configuration
+  license: GPLv2
+  min_ansible_version: 2.9
+  galaxy_tags:
+    - system
+    - storage
+    - library
+dependencies: []
