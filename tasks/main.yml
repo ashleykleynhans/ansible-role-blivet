@@ -1,26 +1,5 @@
 ---
 
-- name: Ensure OS version is EL7 or EL8
-  assert:
-    that:
-      - ansible_os_family == 'RedHat'
-      - ansible_distribution_major_version == '7' or
-        ansible_distribution_major_version == '8'
-    success_msg: >-
-      {{ ansible_os_family  }}
-      {{ ansible_distribution_major_version }} is supported.
-    fail_msg: >-
-      {{ ansible_os_family }}
-      {{ ansible_distribution_major_version }} is not supported.
-
-- name: Gather OS specific variables
-  include_vars: '{{ item }}'
-  with_first_found:
-    - '{{ ansible_distribution }}-{{ ansible_distribution_major_version }}.yml'
-    - '{{ ansible_os_family }}-{{ ansible_distribution_major_version }}.yml'
-  tags:
-    - vars
-
 - name: Install dependencies
   package:
     name: '{{ blivet_packages }}'
@@ -31,5 +10,6 @@
 - name: Install blivet Python module for managing system storage configuration
   pip:
     name: blivet
+    executable: /usr/bin/pip3
   tags:
     - pip
