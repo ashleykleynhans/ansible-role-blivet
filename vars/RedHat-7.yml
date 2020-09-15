@@ -8,3 +8,4 @@ blivet_packages:
   - pyparted 
   - parted
   - libselinux-python
+  - python2-pip

@@ -8,3 +8,4 @@ blivet_packages:
   - python3-pyparted
   - parted
   - libselinux-python3
+  - python3-pip
