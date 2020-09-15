@@ -1,7 +1,6 @@
 ---
 
 blivet_packages:
-  - python3
   - python3-blockdev
   - libblockdev-plugins-all
   - python3-bytesize
@@ -9,11 +8,11 @@ blivet_packages:
   - python3-pyparted
   - parted
   - libselinux-python3
-  - python3-pip
-  - libdnf
-  - libmodulemd
-  - librepo
-  - libsolv
-  - lsof
-  - python3-hawkey
-  - python3-libdnf
+#  - python3-pip
+#  - libdnf
+#  - libmodulemd
+#  - librepo
+#  - libsolv
+#  - lsof
+#  - python3-hawkey
+#  - python3-libdnf
